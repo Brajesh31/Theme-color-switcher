@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+  transition: all 0.5s ease;
+}
+h2 {
+  font-size: clamp(16px, 5vw, 32px);
+  margin-bottom: 20px;
+  font-family: "Grechen Fuemen", serif;
+  transition: all 0.5s ease;
+}
+.container {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  transition: all 1s ease;
+}
+.color-box {
+  height: 60px;
+  width: 60px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+/* Hide Scrollbar */
+.flex-row::-webkit-scrollbar {
+  display: none;
+}
+/* Active Dragging Effect */
+.active {
+  cursor: grabbing;
+}
+
+/* // Media Query */
+@media (max-width: 480px) {
+
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+  }
+  .color-box {
+      width: 45px;
+      height: 45px;
+  }
+}
